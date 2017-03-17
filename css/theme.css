@@ -1,5 +1,5 @@
 .nav { /*header*/
-  background-color: #3ADF00;
+  background-color: #088A29;
   position: fixed;
   left: 0;
   right: 0;
@@ -30,7 +30,10 @@
   background-color: #31B404;
 }
 /*-------------------*/
-
+.topic {
+  padding-left: 100px;
+  padding-right: 0px;
+}
 .footer {
   background-color: #3ADF00;
   position: fixed;
@@ -46,6 +49,11 @@
   background-color: #5ea5f7;
   padding-bottom: 30px;
   padding-top:  40px;
+}
+
+a{
+  color:#FFD707;
+  text-decoration: none;
 }
 
 .img-circle {
