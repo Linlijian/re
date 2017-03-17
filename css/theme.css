@@ -1,0 +1,53 @@
+.nav { /*header*/
+  background-color: #3ADF00;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  width: 100%;
+  height: 50px;
+  color: #FFF;
+}
+
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*menu*/
+.menu {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.active {
+  background-color: #31B404;
+}
+.menu:hover{
+  background-color: #31B404;
+}
+/*-------------------*/
+
+.footer {
+  background-color: #3ADF00;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  width: 100%;
+  height: 50px;
+  color: #FFF;
+}
+
+.blue {
+  background-color: #5ea5f7;
+  padding-bottom: 30px;
+  padding-top:  40px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
