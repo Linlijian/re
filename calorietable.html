@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+ <?php
+      	$h=$a=$h='';
+        echo "<center>";
+        echo  "<h2>"."Results Calorietable Man"."</h2>"."<br>";
+      	echo  "<h4>"."Hight ".$h=$_GET["h"]." cm."."</h4>"."<br>";
+      	echo  "<h4>"."Weight ".$w=$_GET["w"]." kg."."</h4>"."<br>";
+      	echo  "<h4>"."Age ".$a=$_GET["age"]." year"."</h4>"."<br>";
+      	$temp_w = 66 + (13.7 * $w);
+      	$temp_h = (5 * $h);
+      	$temp_a = (6.8 * $a);
+      	$BMR = ($temp_w + $temp_h) - $temp_a;
+        $BMI_H = $h / 100;
+        $BMI = $w / ($BMI_H * $BMI_H);
+      	echo "<h4>"."BMR = $BMR"."</h4>";
+        echo "<h4>"."BMI = ". number_format($BMI, 2, '.', ' ')."</h4>";
+        echo "</center>";
+      ?>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -40,7 +57,7 @@
     </div>
 <!-- end header-->
 <div class="container-fluid">
-  <form action="cal.php" method="GET">
+  <form action="<?php $_PHP_SELF ?>" method="GET">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <center><h1> Basal Metabolic Rate (BMR) Man</h1></center>
