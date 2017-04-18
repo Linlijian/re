@@ -46,13 +46,13 @@
       <?php
       	$h=$a=$h='';
         echo "<center>";
-        echo  "<h2>"."Results Calorietable Man"."</h2>"."<br>";
+        echo  "<h2>"."Results Calorietable Woman"."</h2>"."<br>";
       	echo  "<h4>"."Hight ".$h=$_GET["h"]." cm."."</h4>"."<br>";
       	echo  "<h4>"."Weight ".$w=$_GET["w"]." kg."."</h4>"."<br>";
       	echo  "<h4>"."Age ".$a=$_GET["age"]." year"."</h4>"."<br>";
-      	$temp_w = 66 + (13.7 * $w);
-      	$temp_h = (5 * $h);
-      	$temp_a = (6.8 * $a);
+      	$temp_w = 665 + (9.6 * $w);
+      	$temp_h = (1.8 * $h);
+      	$temp_a = (4.7 * $a);
       	$BMR = ($temp_w + $temp_h) - $temp_a;
         $BMI_H = $h / 100;
         $BMI = $w / ($BMI_H * $BMI_H);
@@ -92,6 +92,7 @@
       </div>
     </div>
 </div>
+
 <!--end body-->
 
 
