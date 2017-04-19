@@ -40,19 +40,18 @@
     </div>
 <!-- end header-->
 <div class="container-fluid">
-  <form action="calwo.php" method="GET">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <center><h1> Basal Metabolic Rate (BMR) Woman</h1></center>
       <br><center>
-      <div class="btn-group-lg" role="group" aria-label="...">
-         <a href="calorietable.html"><button type="button" class="btn btn-default">Man</button></a>
-         <a href="calorietablewo.html"><button type="button" class="btn btn-default">Woman</button></a>
-      </div><br>
+        <div class="btn-group-lg" role="group" aria-label="...">
+           <a href="calorietable.html"><button type="button" class="btn btn-default">Man</button></a>
+           <a href="calorietablewo.html"><button type="button" class="btn btn-default">Woman</button></a>
+        </div><br>
     </center>
       <div class="input-group">
         <div class="input-group-addon">Hight (cm.)</div>
-        <input class="form-control input-lg" type="number" name="h" placeholder="topic">
+        <input id="hight" class="form-control input-lg" type="number" name="h" placeholder="topic">
       </div>
     </div>
   </div>
@@ -61,7 +60,7 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="input-group">
         <div class="input-group-addon">Weight (kg.)</div>
-        <input class="form-control input-lg" type="number" name="w" placeholder="topic">
+        <input id="widght" class="form-control input-lg" type="number" name="w" placeholder="topic">
       </div>
     </div>
   </div>
@@ -70,14 +69,14 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="input-group">
         <div class="input-group-addon">Age (year)</div>
-        <input class="form-control input-lg" type="number" name="age" placeholder="topic">
+        <input id="age" class="form-control input-lg" type="number" name="age" placeholder="topic">
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <br><center>
-      <input class="submit" type="submit" name="" value="submit">
+      <button type="button" onclick="cal()">Submit</button>
     </center>
     </div>
   </div>
@@ -89,8 +88,79 @@
 เพื่อเพิ่มประสิทธิภาพของการเผาผลาญ ซึ่งจะทำให้ BMR ไม่ลดลงเร็วเกินไป</p>
     </div>
   </div>
-</form>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>BMR</h4>
+          <h4>BMI</h4>
+        </div>
+        <div class="col-md-4">
+          <h4 id="bmr">คำตอบ BMR</h4>
+          <h4 id="bmi">คำตอบ BMI</h4>
+        </div>
+        <div class="col-md-4">
+          <h4>หน่วย</h4>
+          <h4>kg/m<sup>2</sup></h4>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>BMI kg/m<sup>2</sup></h4>
+        <h4>น้อยกว่า 18.50</h4>
+        <h4>ระหว่าง 18.50 - 22.90</h4>
+        <h4>ระหว่าง 23 - 24.90</h4>
+        <h4>ระหว่าง 25 - 29.90</h4>
+        <h4>มากกว่า 30</h4>
+      </div>
+      <div class="col-md-4">
+        <h4>อยู่ในเกณท์</h4>
+        <h4>น้ำหนักน้อย / ผอม</h4>
+        <h4>ปกติ (สุขภาพดี)</h4>
+        <h4>ท้วม / โรคอ้วนระดับ 1</h4>
+        <h4>อ้วน / โรคอ้วนระดับ 2</h4>
+        <h4>อ้วนมาก / โรคอ้วนระดับ 3</h4>
+      </div>
+      <div class="col-md-4">
+        <h4>ภาวะเสี่ยงต่อโรค</h4>
+        <h4>มากกว่าคนปกติ</h4>
+        <h4>เท่าคนปกติ</h4>
+        <h4>อันตรายระดับ 1</h4>
+        <h4>อันตรายระดับ 2</h4>
+        <h4>อันตรายระดับ 3</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function cal(){
+  var h,w,a,r;
+  var h1,w1,a1;
+  h1 = document.getElementById('hight').value;
+  w1 = document.getElementById('widght').value;
+  a1 = document.getElementById('age').value;
+  h = parseInt(h1);
+  w = parseInt(w1);
+  a = parseInt(a1);
+  temp_w = 665 + (9.6 * w);
+  temp_h = (1.8 * h);
+  temp_a = (4.7 * a);
+var BMR,BMI_H,BMI;
+  BMR = (temp_w + temp_h) - temp_a;
+  BMI_H = h / 100;
+  BMI = w / (BMI_H * BMI_H);
+   var a = BMR.toFixed(2);
+   var b = BMI.toFixed(2);
+  document.getElementById('bmr').innerHTML = a;
+  document.getElementById('bmi').innerHTML = b;
+}
+</script>
 
 <!--
 <form action="cal.php" method="get">
