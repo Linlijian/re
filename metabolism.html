@@ -27,7 +27,7 @@
           <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
           <li><a href="metabolism.html">Metabolism</a></li>
           <li><a href="calorietable.html">Calorietable</a></li>
-          <li><a href="activity.html">Activity</a></li>
+          <li><a href="activity.html">Purpose</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="aboutus.html">About us</a></li>
