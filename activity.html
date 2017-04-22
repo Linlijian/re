@@ -60,16 +60,38 @@
     </a>
   </div>
 </div>
-  <div class="pang-header">
-  <h3>Usecase </h3>
+<div class="pang-header">
+  <h3>Use Case Diagram</h3>
 </div>
 <div class="row">
     <div class="col-xs-12 col-md-12">
     <a href="index.html" class="thumbnail">
-      <img src="img/1.png" alt="banner" height="60%" width="60%">
+      <img src="img/UseCase.png" alt="banner" height="60%" width="60%">
     </a>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h4>Usecase specification</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn btn-default" onclick="m1()">เข้าสู่ระบบ</button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-default" onclick="m2()">กรอกข้อมูล</button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-default" onclick="m3()">แสดงผลลัพธ์</button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-default" onclick="m4()">แก้ไข/ปรับปรุง</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
 <!--end body-->
 
 
@@ -102,6 +124,30 @@
     </div>
 </div>
 </div>
+<script>
+function m1() {
+    var myWindow = window.open("", "MsgWindow", "width=800,height=600");
+    myWindow.document.write('<img src="img/s1.png" alt="banner" height="100%" width="100%">');
+}
+</script>
+<script>
+function m2() {
+    var myWindow = window.open("", "MsgWindow", "width=800,height=600");
+    myWindow.document.write('<img src="img/s2.png" alt="banner" height="100%" width="100%">');
+}
+</script>
+<script>
+function m3() {
+    var myWindow = window.open("", "MsgWindow", "width=800,height=600");
+    myWindow.document.write('<img src="img/s3.png" alt="banner" height="100%" width="100%">');
+}
+</script>
+<script>
+function m4() {
+    var myWindow = window.open("", "MsgWindow", "width=800,height=600");
+    myWindow.document.write('<img src="img/s4.png" alt="banner" height="100%" width="100%">');
+}
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
